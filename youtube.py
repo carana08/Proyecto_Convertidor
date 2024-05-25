@@ -16,7 +16,7 @@ root.config(bd=15)
 root.title('Descargar videos de YouTube')
 
 imagen_original = Image.open('youtube_black.png')
-ancho_maximo = 300 
+ancho_maximo = 200
 ratio = ancho_maximo / imagen_original.width
 altura = int(imagen_original.height * ratio)
 imagen_redimensionada = imagen_original.resize((ancho_maximo, altura))
