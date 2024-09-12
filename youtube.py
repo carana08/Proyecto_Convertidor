@@ -4,14 +4,17 @@ from PIL import Image, ImageTk
 import os
 import subprocess
 
-# Ruta al ejecutable de yt-dlp
-yt_dlp_path = os.path.join(os.getcwd(), 'bin', 'yt-dlp.exe')
+# Ruta al ejecutable de yt-dlp y ffmpeg
+script_dir = os.path.dirname(os.path.abspath(__file__))
+yt_dlp_path = os.path.join(script_dir, 'bin', 'yt-dlp.exe')
+ffmpeg_path = os.path.join(script_dir, 'bin', 'ffmpeg.exe')
 
 def descargar_video():
     enlace = videos.get()
     ydl_opts = [
         yt_dlp_path,
         '-f', 'bestvideo[height<=720]+bestaudio/best[height<=720]',
+        '--ffmpeg-location', ffmpeg_path,
         '-o', os.path.join('Videos', '%(title)s.%(ext)s'),
         enlace
     ]
@@ -30,6 +33,7 @@ def descargar_audio():
     ydl_opts = [
         yt_dlp_path,
         '-f', 'bestaudio/best',
+        '--ffmpeg-location', ffmpeg_path,
         '-o', os.path.join('Música', '%(title)s.%(ext)s'),
         '--postprocessor-args', '-codec:a libmp3lame -qscale:a 2',
         enlace
@@ -49,7 +53,9 @@ root.config(bd=15)
 root.title('Descargar videos de YouTube')
 
 # Configuración de imagen
-imagen_original = Image.open('youtube_black.png')
+script_dir = os.path.dirname(os.path.abspath(__file__))
+image_path = os.path.join(script_dir, 'youtube_black.png')
+imagen_original = Image.open(image_path)
 ancho_maximo = 200
 ratio = ancho_maximo / imagen_original.width
 altura = int(imagen_original.height * ratio)
