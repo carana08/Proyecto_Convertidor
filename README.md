@@ -9,5 +9,5 @@ Dentro de la carpeta bin se encuentran los archivos de yt-dlp.exe y ffmpeg.exe, 
 ![Imagen2](https://github.com/user-attachments/assets/9297c617-2e35-4028-931f-2a2c915480dd)
 
 ## Repositorios de las herramientas usadas
-yt-dlp: https://github.com/yt-dlp/yt-dlp#installation
-ffmpeg: https://github.com/FFmpeg/FFmpeg?tab=readme-ov-file
+* yt-dlp: https://github.com/yt-dlp/yt-dlp#installation
+* ffmpeg: https://github.com/FFmpeg/FFmpeg?tab=readme-ov-file
