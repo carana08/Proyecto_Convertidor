@@ -7,3 +7,7 @@ Dentro de la carpeta bin se encuentran los archivos de yt-dlp.exe y ffmpeg.exe, 
 **Nota:** Para poder acceder al ejecutable se tiene que acceder a la carpeta dist -> youtube_downloader y dar doble clic a youtube_downloader.exe
 
 ![Imagen2](https://github.com/user-attachments/assets/9297c617-2e35-4028-931f-2a2c915480dd)
+
+## Repositorios de las herramientas usadas
+yt-dlp: https://github.com/yt-dlp/yt-dlp#installation
+ffmpeg: https://github.com/FFmpeg/FFmpeg?tab=readme-ov-file
